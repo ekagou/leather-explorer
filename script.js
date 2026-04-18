@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                         dropdownHTML: '<li class="lg-share-item-whatsapp"><a class="lg-share-whatsapp" style="cursor: pointer;"><span class="lg-icon"></span><span class="lg-dropdown-text">WhatsApp</span></a></li>',
                         selectorAction: function () {
                             const url = encodeURIComponent(window.location.href);
-                            window.open('https://wa.me/?text=' + url, '_blank');
+                            window.location.href = 'whatsapp://send?text=' + url;
                         }
                     }
                 ]
