@@ -46,10 +46,12 @@ document.addEventListener("DOMContentLoaded", async () => {
                 share: true,
                 additionalShareOptions: [
                     {
-                        id: 'whatsapp',
-                        label: 'WhatsApp',
-                        url: 'https://wa.me/?text=' + encodeURIComponent(window.location.href),
-                        icon: 'lg-icon-whatsapp' 
+                        selector: '.lg-share-whatsapp',
+                        dropdownHTML: '<li class="lg-share-item-whatsapp"><a class="lg-share-whatsapp" style="cursor: pointer;"><span class="lg-icon"></span><span class="lg-dropdown-text">WhatsApp</span></a></li>',
+                        selectorAction: function () {
+                            const url = encodeURIComponent(window.location.href);
+                            window.open('https://wa.me/?text=' + url, '_blank');
+                        }
                     }
                 ]
             });
