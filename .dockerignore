@@ -1,0 +1,6 @@
+.git
+.gemini/
+.DS_Store
+__pycache__/
+Dockerfile
+.dockerignore
