@@ -53,6 +53,6 @@ class CustomHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
 class ReusableTCPServer(socketserver.TCPServer):
     allow_reuse_address = True
 
-with ReusableTCPServer(("", PORT), CustomHTTPRequestHandler) as httpd:
+with ReusableTCPServer(("0.0.0.0", PORT), CustomHTTPRequestHandler) as httpd:
     print(f"Serving at port {PORT}")
     httpd.serve_forever()
