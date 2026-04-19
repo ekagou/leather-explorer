@@ -3,7 +3,7 @@ import socketserver
 import json
 import os
 
-PORT = 3000
+PORT = int(os.environ.get('PORT', 3000))
 
 class CustomHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
     def do_GET(self):
